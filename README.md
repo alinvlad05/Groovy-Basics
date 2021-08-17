@@ -55,3 +55,13 @@ The other important strategies are:<br/>
 OWNER_ONLY: It attempts to resolve the property or methods within the owner only and doesn't delegate.<br/>
 DELEGATE_ONLY: Closure will resolve the property references or methods to the delegate. It completely ignores the owner.<br/>
 TO_SELF: It will resolve the property references or methods to itself and go through the usual MetaClass look-up process.<br/>
+
+# Gradle Basics
+A build file consists of three phases: initialization, configuration, and execution, which are explained briefly as follows:<br/>
+• Initialization creates the project object.<br/>
+• The configuration phase configures the project object, creates DAG (Directed Acyclic Graph) based on task dependencies.<br/>
+It also executes the project and the task configuration statements.<br/>
+• The execution phase finally executes the actions mentioned in the task body.<br/>
+The task API mainly defines two types of closures: doFirst(Closure closure) and doLast(Closure closure),<br/>
+which internally calls doFirst(Action action) and doLast(Action action). You can mention either one or both of them.<br/>
+Statements mentioned outside of these actions are part of your configuration, which are executed during the configuration phase.<br/>
