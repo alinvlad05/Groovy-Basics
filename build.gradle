@@ -50,3 +50,25 @@ sampleTask3.doFirst {println "Adding doFirst action" }
 // Extra statements added later
 sampleTask2.doFirst { println "Actions added separately" }
 sampleTask2.doLast { println " More Actions added " }
+
+/* OUTPUT gradle sampleTask1 sampleTask2 sampleTask3
+This is project configuration part, description is Sample Java Project           
+This is sampleTask1 configuration statements, taskDetail is  This is custom property of task1
+This is sampleTask2 configuration statements
+Executing task3                            
+:sampleTask1                               
+Project name is Chapter3, description is Sample Java Project
+Task name is sampleTask1, description is This is task level description
+Project start date is Jan 2015
+Project endDate is Dec 2015 
+:sampleTask2                 
+Actions added separately     
+Task getProjectDetailsTask properties are  This is custom property of task1
+ More Actions added          
+:sampleTask3                 
+Adding doFirst action        
+                             
+BUILD SUCCESSFUL
+               
+Total time: 1.414 secs
+*/
