@@ -5,7 +5,7 @@
 the power of Groovy lies in dynamic typing. In many scenarios, you are not sure about the kind of value that <br/>
 would be stored in the variable or returned by the functions. In that scenario, Groovy provides flexibility to use dynamic typing. <br/>
 You can just define a variable or methods by using the def keyword.<br/>
-Another use of dynamic typing is calling methods on objects that have no guaranteed type. <br/>
+Another use of dynamic typing is calling methods on objects that have no guaranteed type. <br/> 
 This is often called duck typing. For example, consider the following scenario where a simple addition method is called on different data types <br/>
 such as Integer, List, and String. <br/>
 Based on different input parameters, each time the method returns different output.<br/>
