@@ -66,7 +66,7 @@ The task API mainly defines two types of closures: doFirst(Closure closure) and 
 which internally calls doFirst(Action action) and doLast(Action action). You can mention either one or both of them.<br/>
 Statements mentioned outside of these actions are part of your configuration, which are executed during the configuration phase.<br/>
 
-File management
+File management <br/>
 One of the key features of any build tool is I/O operations and how easily you can perform the I/O operations <br/>
 such as reading files, writing files, and  directory-related operations. 
 Developers with Ant or Maven backgrounds know  how painful and complex it was <br/>
