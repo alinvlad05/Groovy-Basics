@@ -65,3 +65,13 @@ It also executes the project and the task configuration statements.<br/>
 The task API mainly defines two types of closures: doFirst(Closure closure) and doLast(Closure closure),<br/>
 which internally calls doFirst(Action action) and doLast(Action action). You can mention either one or both of them.<br/>
 Statements mentioned outside of these actions are part of your configuration, which are executed during the configuration phase.<br/>
+
+File management
+One of the key features of any build tool is I/O operations and how easily you can perform the I/O operations <br/>
+such as reading files, writing files, and  directory-related operations. 
+Developers with Ant or Maven backgrounds know  how painful and complex it was <br/>
+to handle the files and directory operations in old build tools; <br/>
+sometimes you had to write custom tasks and plugins to perform these <br/>
+kinds of operations due to XML limitations in Ant and Maven.<br/>
+Since Gradle uses Groovy, it will make your life much easier <br/>
+while dealing with files and directory-related operations.<br/>
