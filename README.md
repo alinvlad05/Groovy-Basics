@@ -14,7 +14,7 @@ Classes and methods in Groovy by default have public access, whereas in Java it 
 We have created fields in the class with no access modifier. If fields are created with default access, <br/>
 then Groovy automatically creates a field with public getter and setter methods. <br/>
 If we specify any access modifier (public, private, or protected), then only fields will be created; <br/>
-no getter or setter method will be created. <br/>
+no getter or setter method will be created. <br/> 
 So, each class in Groovy has properties and autocreated getter and setter methods for those properties. <br/>
 This is similar to the Java bean approach, where private fields are created with public getter and setter methods, <br/>
 but with less number of lines of code as, getter and setter methods are implicitly provided by Groovy. <br/>
