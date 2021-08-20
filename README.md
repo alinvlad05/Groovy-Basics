@@ -75,4 +75,22 @@ sometimes you had to write custom tasks and plugins to perform these <br/>
 kinds of operations due to XML limitations in Ant and Maven.<br/>
 Since Gradle uses Groovy, it will make your life much easier <br/>
 while dealing with files and directory-related operations.<br/>
- 
+
+Multi-project structure <br/>
+The settings.gradle file is one of the key files in multi-project build.<br/>
+This file needs to be present in the root project's directory. It lists all the subprojects.<br/>
+To determine if the current build process is part of a multi-project build, it searches for <br/>
+the settings.gradle file first in the current directory and then in its parent hierarchy. <br/>
+If it finds settings.gradle in the same directory, it considers itself as a parent project <br/>
+and then checks for subprojects. In another case, if it finds the settings.gradle file in <br/>
+its parent hierarchy, it checks whether or not the current subdirectory is a subproject of <br/>
+the root project that is found. If the current project is part of the root project, then it is <br/>
+executed as a part of the multi-project build, otherwise, as a single project build.<br/>
+Before executing a task in the multi-project build, Gradle will search for the task in <br/>
+the root project and in all the subprojects. If the task are found in multiple projects, <br/>
+it will execute all the tasks consecutively.<br/>
+For example, you want to set some properties in the profile project and you want to use <br/>
+those properties in the login project. You can achieve this using evaluationDependsOn. <br/>
+To enable this feature, you should have separate build.gradle files for each subproject.<br/>
+Partial builds enable you to build only the required project, not its dependency projects. <br/>
+command-line option -a can be applied<br/>
